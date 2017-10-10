@@ -1,5 +1,7 @@
 # chippy-sprites :chipmunk:
 
+![ci](https://travis-ci.org/geekytime/chippy-sprites.svg?branch=master)
+
 ## Philosophy
 
 A lot of game frameworks are very heavy-weight and rigid. chippy-sprites is an attempt to build a basic animated sprite that could be used in HTML-based games that can be used without a heavy framework, and can be easily integrated into any game or app.
