@@ -8,3 +8,6 @@ script:
   - yarn test
 
 cache: yarn
+
+addons:
+  chrome: stable
