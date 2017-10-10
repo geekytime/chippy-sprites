@@ -1,8 +1,6 @@
 var sprites = require("../lib/sprites.js")
 require("./demo.less")
 
-"https://orig00.deviantart.net/ccc3/f/2012/203/1/3/cat_base_sprite_sheet_by_sammycatbone-d586e2s.jpg"
-
 var template = `
   <div class="params">
     <h1>This is a simple demo of chippy-sprites. For more info, check out the <a href="https://github.com/geekytime/chippy-sprites/blob/master/README.md">README</a>.</h1>
