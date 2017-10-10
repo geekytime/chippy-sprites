@@ -6,7 +6,7 @@ var template = `
     <h1>This is a simple demo of chippy-sprites. For more info, check out the <a href="https://github.com/geekytime/chippy-sprites/blob/master/README.md">README</a>.</h1>
     <div>
       <label for="src">Sprite Sheet URL (You can paste image urls here for online images, too.)</label>
-      <input id="src" value="/run.png" />
+      <input id="src" value="./run.png" />
     </div>
     <div>
       <label for="rows">Rows</label>

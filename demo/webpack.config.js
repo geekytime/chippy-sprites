@@ -23,7 +23,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "../docs"),
     filename: "demo.js",
-    publicPath: "/"
+    publicPath: "/chippy-sprites"
   },
   devtool: "eval",
   devServer: {
