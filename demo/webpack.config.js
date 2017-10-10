@@ -22,8 +22,8 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "../docs"),
-    filename: "demo.js",
-    publicPath: "/chippy-sprites"
+    filename: "./demo.js",
+    publicPath: "/chippy-sprites/"
   },
   devtool: "eval",
   devServer: {
