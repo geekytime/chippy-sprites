@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - "node"
+  node
 
 script:
   - yarn lint
@@ -15,4 +15,15 @@ addons:
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
+  - sleep 3
+
+before_deploy:
+  npm version $(./node_modules/.bin/conventional-recommended-bump)
+
+deploy:
+  provider: npm
+  email: chris@jaynes.me
+  api_key:
+    secure: BXAt5oxtQM3yhr4jaUgpRHypDJsDWLmCZFvnnXOO4iFlccEyHuBJ2MwkCbWH/A+uwnZJ/Jo0l0vCME2P+LGebYJtZTVyPR64uRpwCUzItSqcR96NjOcMjgx56uyfoE9VhsaZp2/XwIonRgKm6mIOxRq+0aEXhPqzxcWnab8I2tH0eFFs66c+i3gJZINXVOkbFqflspVxajvZ1/y/+e5SqzHu+B1kqjtYpSeAfI3ckljVqO6P+rr/U81X79CJmUoKVQPhVZ3NM+EggWXwy0AVcSXyFPq5vD4BCJ8HgXbxF9Vygxu5Y8kfDE4QZKIFgS0xDiDxOEbiMXPm0aSynwu2e/e1WE3tdlA5D4PUrj7jRHPXl+yL5aUEyMLMBxu1sFHCus2BqTmGBpftWxSt/UQtOpra6nLVZXWrXHy5b/+QJandpQXx4a90WprzlgzSKOfkkcApQ+2PUGnLNTqMhrxQFiXLcAR9oocCTj7ejtFv/R7jZuAHDz6zxE76ZmoLm0F1K0pAh3vDA5jRqSzTkkaNmVYd7pjoJzwWtBb4/+i7GyNMKRIuIQYTXtTmSDZkEve4qPyRZgTuIrhZ0AequPmiX/nqtOAmORwMy9nBJOvMPYjW40HUXUtIUiAm1gNzxszneX5whIey96TXe6KVZctGqZmqHSA8162zKCJr6Q3XUi4=
+  on:
+    branch: master
